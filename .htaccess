@@ -1,7 +1,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|robots\.txt|img|css|js)
 RewriteRule ^(.*)$ public/index.php [PT,L]
 </IfModule>
 php_value error_reporting E_ERROR

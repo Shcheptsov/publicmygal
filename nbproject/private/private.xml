@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/myProjects/mygal.local/www/Controllers/AdminController.php</file>
+            <file>file:/C:/myProjects/mygal.local/www/Models/CategoryModel.php</file>
+            <file>file:/C:/myProjects/mygal.local/www/public/js/categories.js</file>
+            <file>file:/C:/myProjects/mygal.local/www/Views/admin/Categories.tpl</file>
+        </group>
     </open-files>
 </project-private>

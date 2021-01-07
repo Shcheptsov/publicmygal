@@ -20,8 +20,12 @@ class Session
     public static function get($key, $default = null){
         return !empty($_SESSION[$key]) ? $_SESSION[$key] : $default;
     }
-
+    
+    public static function remove($key){
+        unset($_SESSION[$key]);
+    }
+  
     public static function flush(){
-    session_destroy();
+        session_destroy();
     }
 }
