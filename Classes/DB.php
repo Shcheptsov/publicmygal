@@ -3,9 +3,9 @@ namespace Classes;
 
 class DB {
     private static $db;
-    public function getInstance() {
+    public function getInstance(){
         if (!self::$db){
-           $db = new \mysqli('localhost', 'root', '', 'photo_job');
+           $db = new \mysqli('localhost', 'root', '', 'mygal');
            if($db->errno){
                die("Error, while connnect to MySql");
            }
