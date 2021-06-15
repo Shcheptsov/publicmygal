@@ -9,8 +9,9 @@ class AdminController {
         $login->userId = $userId['id'];
         $login->params = $params[0];
         $res = $login->categoryList();
+        $logoType = $login->expLogo(); 
         $items = $login->categoryId();
-        
+        $smarty->assign('logoType', $logoType[0]['imageType']); 
         if (empty($res)){
             $res[0]['kat'] ='Example1';
             $res[1]['kat'] ='Example2';
@@ -56,14 +57,45 @@ class AdminController {
         $res = $modal->updateList();
         $this->response(['success' => $res]);
     }
+        public function updatePicture(){
+        global $smarty;
+        $file = $_FILES['file'];
+        
+        $modal = new imageModel();
+        $modal->login = $_POST['login'] ;
+        $modal->category_id = $_POST['category_id'] ;
+        $modal->imageName = $_POST['imageName'] ;
+        $modal->imageType = $_POST['imageType'] ;
+        $modal->file = $file ;
+        $res = $modal->updatePic();
+        $this->response(['success' => $res]);
+    }
     
-    public function items_create() {
+
+    public function imagesCreate() {
         $userId = UserModel::getUserId($_SESSION['user']['login']);
-        $item = new ImageModel();
-        $item->description = $_POST['description'];
-        $item->category_id = $_POST['category'];
-        $item->userId = $userId['id'];   
-        $item->save($_SESSION['user']['login']);
+        $image = new ImageModel();
+        $image->description = $_POST['description'];
+        $image->category_id = $_POST['category'];
+        $image->userId = $userId['id'];   
+        $image->save($_SESSION['user']['login']);
+    }
+    
+    public function imagesLogo() {
+        $userId = UserModel::getUserId($_SESSION['user']['login']);
+        $image = new ImageModel();
+        $image->userId = $userId['id'];   
+        $image->saveLogo($_SESSION['user']['login']);
+    }
+    public function imagesRemove() {
+        $userId = UserModel::getUserId($_SESSION['user']['login']);
+        $image = new ImageModel();
+        $image->userId = $userId['id'];
+        $image->imageName = $_POST['imageName'];
+        $image->category_id = $_POST['category_id'];
+        $image->imageType = $_POST['imageType'];
+        $image->removeImage($_SESSION['user']['login']);
+        echo json_encode('ok');
     }
     
     public function categories() {
@@ -122,6 +154,11 @@ class AdminController {
         $categoryModel->name = $_POST['name'];
         $res = $categoryModel->update();
         $this->response(['success' => $res]);
+    }
+    
+    public function constructor() {
+        global $smarty;
+        $smarty->display('admin/constructor.tpl');
     }
     
     private function response($data = ['success' => true]) {

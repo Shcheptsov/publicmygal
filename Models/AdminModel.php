@@ -11,6 +11,15 @@ class AdminModel{
        return $db->query($query)->fetch_all(MYSQLI_ASSOC);
     }
     
+    public  function expLogo(){
+       $db = \Classes\DB::getInstance(); 
+   $query = "SELECT `imageType` FROM `logo`"
+               ."where `login` = '".$this->login."' and `id_user` = ".$this->userId;
+//       print_r($query);
+//       die();
+       return $db->query($query)->fetch_all(MYSQLI_ASSOC);
+    }   
+    
     public  function categoryId(){
        $db = \Classes\DB::getInstance(); 
        $query = "SELECT * FROM `content` as t, `users` as w "

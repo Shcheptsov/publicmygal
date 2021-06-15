@@ -1,6 +1,5 @@
 <?php
 //получаем содиржимое url запроса
-//ltrim удаляет символ
 //Автоматическая загрузка классов spl_autoload_register
 error_reporting(E_ERROR );
 ini_set('display_errors', 'On'); 

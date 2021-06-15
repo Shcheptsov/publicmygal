@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-06 10:21:36
+/* Smarty version 3.1.34-dev-7, created on 2021-06-15 11:48:22
   from 'C:\myProjects\mygal.local\www\Views\admin\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ff58120e73b75_11273669',
+  'unifunc' => 'content_60c87766d4e180_44495269',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46ce454e10505d518b34b18c38f8887f6b8803b6' => 
     array (
       0 => 'C:\\myProjects\\mygal.local\\www\\Views\\admin\\index.tpl',
-      1 => 1609924882,
+      1 => 1623750494,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ff58120e73b75_11273669 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c87766d4e180_44495269 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3980748545ff58120bb2ee8_91505202', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19252148460c87766d066a9_16664130', 'title');
 ?>
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19778696155ff58120bb4af6_96384006', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_136704832960c87766d08557_89576726', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2848215755ff58120cacc94_60916077', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11805647160c87766d22787_77129243', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "admin/Layout.tpl");
 }
 /* {block 'title'} */
-class Block_3980748545ff58120bb2ee8_91505202 extends Smarty_Internal_Block
+class Block_19252148460c87766d066a9_16664130 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_3980748545ff58120bb2ee8_91505202',
+    0 => 'Block_19252148460c87766d066a9_16664130',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ Responsive Image Gallery<?php
 }
 /* {/block 'title'} */
 /* {block 'head'} */
-class Block_19778696155ff58120bb4af6_96384006 extends Smarty_Internal_Block
+class Block_136704832960c87766d08557_89576726 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'head' => 
   array (
-    0 => 'Block_19778696155ff58120bb4af6_96384006',
+    0 => 'Block_136704832960c87766d08557_89576726',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -115,19 +115,24 @@ echo $_prefixVariable2;?>
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_2848215755ff58120cacc94_60916077 extends Smarty_Internal_Block
+class Block_11805647160c87766d22787_77129243 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_2848215755ff58120cacc94_60916077',
+    0 => 'Block_11805647160c87766d22787_77129243',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <div class="content">
-            <h1>Juliya_pm.yar 
+    <div class="block" id="block1">
+        <img src="/Users/<?php echo $_SESSION['user']['login'];?>
+/logo/logo<?php echo $_smarty_tpl->tpl_vars['logoType']->value;?>
+" data-large="/Users/admin/logo/logo.png" alt="image01" data-description="From off a hill whose concave womb reworded" />
+    </div>
+    <div class="block" id="block3">
+            <h1>Text logo
                 <span>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'category');
@@ -166,7 +171,7 @@ echo $_smarty_tpl->tpl_vars['image']->value['imageType'];?>
 " data-large="/Users/image_example/<?php echo $_smarty_tpl->tpl_vars['image']->value['imageDir'];?>
 /<?php echo $_smarty_tpl->tpl_vars['image']->value['imageName'];
 echo $_smarty_tpl->tpl_vars['image']->value['imageType'];?>
-" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+" alt="image01" data-description="TODO description DB" /></a></li>
                                     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -187,7 +192,7 @@ echo $_smarty_tpl->tpl_vars['item']->value['imageType'];?>
 /<?php echo $_smarty_tpl->tpl_vars['item']->value['imageDir'];?>
 /<?php echo $_smarty_tpl->tpl_vars['item']->value['imageName'];
 echo $_smarty_tpl->tpl_vars['item']->value['imageType'];?>
-" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+" alt="image01" data-description="TODO description DB" /></a></li>
                                     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -198,7 +203,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <!-- End Elastislide Carousel Thumbnail Viewer -->
                 </div><!-- rg-thumbs -->
             </div><!-- rg-gallery -->
-            <p class="sub">Want more Shakespeare? <a href="http://www.opensourceshakespeare.org/" target="_blank">http://www.opensourceshakespeare.org/</a></p>
         </div><!-- content -->
     
     <?php echo '<script'; ?>

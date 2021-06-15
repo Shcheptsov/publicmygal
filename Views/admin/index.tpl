@@ -39,8 +39,11 @@
     </script>
 {/block}
 {block name=body}
-    <div class="content">
-            <h1>Juliya_pm.yar 
+    <div class="block" id="block1">
+        <img src="/Users/{$smarty.session.user.login}/logo/logo{$logoType}" data-large="/Users/admin/logo/logo.png" alt="image01" data-description="From off a hill whose concave womb reworded" />
+    </div>
+    <div class="block" id="block3">
+            <h1>Text logo
                 <span>
                     {foreach $categories as  $category }
                     <a href="/admin/personal/{$category['id_category']}">{$category['kat']}</a>
@@ -60,13 +63,13 @@
                             <ul>
                                 {if isset($imageExample)}
                                     {foreach $imageExample as  $image }
-                                        <li><a href="#"><img src="/Users/image_example/{$image['imageDir']}/thumbs/{$image['imageName']}{$image['imageType']}" data-large="/Users/image_example/{$image['imageDir']}/{$image['imageName']}{$image['imageType']}" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+                                        <li><a href="#"><img src="/Users/image_example/{$image['imageDir']}/thumbs/{$image['imageName']}{$image['imageType']}" data-large="/Users/image_example/{$image['imageDir']}/{$image['imageName']}{$image['imageType']}" alt="image01" data-description="TODO description DB" /></a></li>
                                     {/foreach}
                                 {/if}
                                 
                                 {if isset($items)}
                                     {foreach $items as  $item }
-                                        <li><a href="#"><img src="/Users/{$smarty.session.user.login}/{$item['imageDir']}/thumbs/{$item['imageName']}{$item['imageType']}" data-large="/Users/{$smarty.session.user.login}/{$item['imageDir']}/{$item['imageName']}{$item['imageType']}" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+                                        <li><a href="#"><img src="/Users/{$smarty.session.user.login}/{$item['imageDir']}/thumbs/{$item['imageName']}{$item['imageType']}" data-large="/Users/{$smarty.session.user.login}/{$item['imageDir']}/{$item['imageName']}{$item['imageType']}" alt="image01" data-description="TODO description DB" /></a></li>
                                     {/foreach}
                                 {/if}
                             </ul>
@@ -75,8 +78,8 @@
                     <!-- End Elastislide Carousel Thumbnail Viewer -->
                 </div><!-- rg-thumbs -->
             </div><!-- rg-gallery -->
-            <p class="sub">Want more Shakespeare? <a href="http://www.opensourceshakespeare.org/" target="_blank">http://www.opensourceshakespeare.org/</a></p>
-        </div><!-- content -->
+{*            <p class="sub">Want more Shakespeare? <a href="http://www.opensourceshakespeare.org/" target="_blank">http://www.opensourceshakespeare.org/</a></p>
+*}        </div><!-- content -->
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="/public/js/jquery.tmpl.min.js"></script>
